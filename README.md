@@ -35,7 +35,7 @@ animation.fillMode = kCAFillModeForwards;
 
 CABasicAnimation的fillMode
 
-	Mode  | 解释
+keypath | 解释
 ------------- | -------------
 kCAFillModeRemoved  |  动画将在设置的 beginTime 开始执行（如没有设置beginTime属性，则动画立即执行），动画执行完成后将会layer的改变恢复原状。
 kCAFillModeForwards  | 动画即使之后layer的状态将保持在动画的最后一帧，而removedOnCompletion的默认属性值是 YES，所以为了使动画结束之后layer保持结束状态，应将removedOnCompletion设置为NO。
