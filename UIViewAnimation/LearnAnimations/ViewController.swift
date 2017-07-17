@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        test3()
+
     }
     
     /// UIView的转场动画
@@ -67,6 +67,5 @@ class ViewController: UIViewController {
         print(#function)
         print(#line)
     }
-
 }
 
