@@ -86,7 +86,20 @@ contents | 内容 参数：CGImage
 contentsRect | 可视内容 参数：CGRect 值是0～1之间的小数 
 hidden | 是否隐藏 
 
+## 转场动画类型
 
+类型 | 解释
+------------- | -------------
+kCATransitionFade | 交叉淡化过渡
+kCATransitionMoveIn | 新视图移到旧视图上面
+kCATransitionPush | 新视图把旧视图推出去
+kCATransitionReveal | 将旧视图移开,显示下面的新视图
+pageCurl | 向上翻一页
+pageUnCurl | 向下翻一页
+rippleEffect | 滴水效果
+suckEffect | 收缩效果，如一块布被抽走
+cube | 立方体效果
+oglFlip | 上下翻转效果
 
 
 
