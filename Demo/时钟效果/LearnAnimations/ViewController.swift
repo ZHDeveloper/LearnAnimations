@@ -32,7 +32,8 @@ class ViewController: UIViewController {
         
         hoursLayer = CALayer()
         view.layer.addSublayer(hoursLayer)
-        hoursLayer.contentsScale = 5
+        hoursLayer.contentsScale = UIScreen.main.scale
+        hoursLayer.allowsEdgeAntialiasing = true
         hoursLayer.backgroundColor = UIColor.black.cgColor
         hoursLayer.bounds = CGRect(x: 0, y: 0, width: 5, height: 65)
         hoursLayer.position = view.center
@@ -40,15 +41,17 @@ class ViewController: UIViewController {
         
         minutesLayer = CALayer()
         view.layer.addSublayer(minutesLayer)
-        minutesLayer.contentsScale = 5
+        minutesLayer.contentsScale = UIScreen.main.scale
+        minutesLayer.allowsEdgeAntialiasing = true
         minutesLayer.backgroundColor = UIColor.black.cgColor
         minutesLayer.bounds = CGRect(x: 0, y: 0, width: 3, height: 75)
         minutesLayer.position = view.center
         minutesLayer.anchorPoint = CGPoint(x: 0.5, y: 0.80)
         
         secondsLayer = CALayer()
-        secondsLayer.contentsScale = 5
         view.layer.addSublayer(secondsLayer)
+        secondsLayer.contentsScale = UIScreen.main.scale
+        secondsLayer.allowsEdgeAntialiasing = true
         secondsLayer.backgroundColor = UIColor.red.cgColor
         secondsLayer.bounds = CGRect(x: 0, y: 0, width: 2, height: 90)
         secondsLayer.position = view.center
@@ -56,6 +59,10 @@ class ViewController: UIViewController {
         
         let circleLayer = CALayer()
         view.layer.addSublayer(circleLayer)
+        // 抗锯齿
+        circleLayer.contentsScale = UIScreen.main.scale
+        circleLayer.allowsEdgeAntialiasing = true
+        
         circleLayer.bounds = CGRect(x: 0, y: 0, width: 10, height: 10)
         circleLayer.backgroundColor = UIColor.red.cgColor
         circleLayer.cornerRadius = 5
