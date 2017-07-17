@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var colorView: UIView!
+    @IBOutlet weak var heartView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +19,17 @@ class ViewController: UIViewController {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
+        let animation = CABasicAnimation()
+        animation.keyPath = "transform.scale"
+        animation.toValue = 0
+        animation.duration = 0.5
+        animation.repeatCount = HUGE
+        animation.autoreverses = true
+        heartView.layer.add(animation, forKey: nil)
+        
+    }
+    
+    func test1() {
         let animation1 = CABasicAnimation()
         animation1.keyPath = "position"
         animation1.byValue = CGPoint(x: 10, y: 10)
@@ -33,7 +44,7 @@ class ViewController: UIViewController {
         groupAnimations.isRemovedOnCompletion = false
         groupAnimations.fillMode = kCAFillModeForwards
         
-        colorView.layer.add(groupAnimations, forKey: nil)
+        heartView.layer.add(groupAnimations, forKey: nil)
     }
     
 }
