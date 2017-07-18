@@ -101,6 +101,19 @@ suckEffect | 收缩效果，如一块布被抽走
 cube | 立方体效果
 oglFlip | 上下翻转效果
 
+## CAGradientLayer
+
+CAGradientLayer:渐变图层
+
+属性 | 解释
+------------- | -------------
+colors  | 梯度颜色变化的CGColorRef数组
+locations  | 规定所有的颜色梯度的区间范围,选值只能在0到1之间
+endPoint  | 图层颜色绘制的终点坐标,也就是阶梯图层绘制的结束点,默认值是(0.5,1.0)
+startPoint  | 与endPoint相互对应,就是绘制阶梯图层的起点坐标,绘制颜色的起点,默认值是(0.5,0.0)
+
+startpoint和endpoint图解：
+![point属性](./location.png)
 
 
 
